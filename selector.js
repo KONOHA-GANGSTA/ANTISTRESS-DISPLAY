@@ -1,16 +1,26 @@
 let selector = document.getElementById("selector");
 
-document.getElementById("size").childNodes[1].addEventListener("click",()=>{
-    size = 0;
-    selector.style.top = "0em";
-})
+let step = document.getElementById("size").childNodes[1].clientHeight;
+selector.style.top=step+"px";
 
-document.getElementById("size").childNodes[3].addEventListener("click",()=>{
-    size = 1;
-    selector.style.top = "2em";
-})
-
-document.getElementById("size").childNodes[5].addEventListener("click",()=>{
-    size = 2;
-    selector.style.top = "4em";
-})
+for(let i = 3;i<8;i++)
+    if(i%2==1)
+        document.getElementById("size").childNodes[i].addEventListener("click",()=>{
+            switch(i){
+                case 3:{
+                    size = 0;
+                    selector.style.top = step +"px";
+                    break;
+                }
+                case 5:{
+                    size = 1;
+                    selector.style.top = 2* step +"px";
+                    break;
+                }
+                case 7:{
+                    size = 2;
+                    selector.style.top = 3* step +"px";
+                    break; 
+                }
+            }
+        })
