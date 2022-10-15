@@ -81,7 +81,7 @@ window.addEventListener("keydown",(event)=>{
             break;
         }
 
-        case " ":{
+        case "Enter":{
             table.childNodes[activeCell.x].childNodes[activeCell.y].click();
         }
     }
