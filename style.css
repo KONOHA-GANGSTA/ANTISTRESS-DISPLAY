@@ -11,6 +11,7 @@ td{
 #display{
     display:flex;
     justify-content: center;
+    grid-area: "disp";
 }
 
 #size,#resolution{
@@ -23,6 +24,7 @@ td{
 
 #size{
     position: relative;
+    grid-area: "size";
 }
 
 #size div{
@@ -41,4 +43,27 @@ td{
 
 #resolution{
     margin-top: 1em;
+}
+
+table{
+    min-width: 399px;
+    max-height: 399px;
+}
+
+@media (max-width:966px){
+   .container{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+   #selector{
+    width: 90%;
+    left : 4%
+   }
+}
+
+@media (max-width:510px){
+    td{
+        width: 20px;
+        height: 20px;
+    }
 }
