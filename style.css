@@ -67,3 +67,14 @@ table{
         height: 20px;
     }
 }
+
+@media (max-width: 430px){
+    table{
+        min-width: 350px;
+        max-height: 350px;
+    }
+    td{
+        width: 18px;
+        height: 18px;
+    }
+}
